@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import MoonCard from "./Components/MoonCard.js";
 
-import "./App.css";
+import "./App.scss";
 
 
 function App() {
@@ -24,9 +24,10 @@ function App() {
     }, [])
  
   return (
-    <div className="App">
+    <div className="moon-cards">
       <MoonCard title={data.title}
                         url={data.url}
+                        date={data.date}
                         explanation={data.explanation} />
     </div>
   );
